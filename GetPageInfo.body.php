@@ -6,7 +6,7 @@
 
 class GetPageInfo {
 
-	function executeGetTitle( $parser, $frame, $args ) {
+	public static function executeGetTitle( $parser, $frame, $args ) {
 
 		$fulltitle = "";
 
@@ -59,7 +59,7 @@ class GetPageInfo {
 		return( $title );
 	}
 
-	function executeGetNS( $parser, $frame, $args ) {
+	public static function executeGetNS( $parser, $frame, $args ) {
 
 		$fulltitle = trim( $frame->expand( $args[0] ) );
 	
@@ -74,7 +74,7 @@ class GetPageInfo {
 	
 	}
 
-	function executeGetSummary( $parser, $frame, $args ) {
+	public static function executeGetSummary( $parser, $frame, $args ) {
 
 		$revid =  trim( $frame->expand( $args[0] ) );
 		$summary = "";
